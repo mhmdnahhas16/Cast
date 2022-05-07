@@ -5,3 +5,9 @@ setTimeout(() => {
     loader.classList.add("Disappear")
     document.body.style.overflowY = "scroll";
 }, 2000);
+// Navbar
+const Navbar = document.querySelector('.menu-icon');
+const Buttons = document.querySelector('.Buttons');
+Navbar.addEventListener("click", () => {
+    Buttons.classList.toggle("Up");
+});
