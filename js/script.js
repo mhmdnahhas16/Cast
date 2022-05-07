@@ -2,6 +2,6 @@
 const loader = document.querySelector(".loader_bg");
 document.body.style.overflowY = "hidden";
 setTimeout(() => {
-    loader.style.display = "none";
+    loader.classList.add("Disappear")
     document.body.style.overflowY = "scroll";
-}, 1000);
+}, 2000);
