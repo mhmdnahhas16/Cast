@@ -4,11 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: red;
-}
+body{background-color: red;}
 /* variables */
-:root{}
+:root{
+    --login: #d5ba08;
+    --sing-up: #fbd10f;
+}
 /* loader animation */
 .loader_bg{
     width: 100%;
@@ -17,6 +18,7 @@ body{
     background-color: white;
     transition: all .4s ease-in-out;
     opacity: 1;
+    z-index: 99999;
 }
 .loader_bg img{
     width: 20rem;
@@ -32,4 +34,53 @@ body{
 .Disappear{
     opacity: 0;
     visibility: hidden;
+}
+/* Navbar */
+.Navbar{
+    width: 100%;
+    height: 4rem;
+    display: grid;
+    place-items: center;
+    background-color:#12153c ;
+}
+.Navbar .center{
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+}
+.Navbar .center img:first-child{
+    height: 2rem;
+}
+.Navbar .center .Buttons{
+    display: flex;
+    gap: 0rem;
+    transition: all .3s ease-in-out;
+}
+.Navbar .center .Buttons .Login{
+    background-color: var(--login);
+    padding: 4px 27px;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.Navbar .center .Buttons .Login:hover{
+    background-color: black;
+}
+.Navbar .center .Buttons .SingUp{
+    padding: 4px 1rem;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+.Navbar .center .Buttons .SingUp:hover{
+    color: var(--sing-up);
+}
+.Navbar .center .menu-icon{
+    display: none;
+    width: 2rem;
+    height: 1.7rem;
+    position: relative;
+    top: 0.3rem;
 }
